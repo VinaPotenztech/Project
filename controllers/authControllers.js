@@ -2,7 +2,6 @@ const User=require('../models/userModel');
 const bcrypt = require('bcryptjs');
 const jwt=require('jsonwebtoken')
 const {JWT_SECRET}=require('../utils/jwtUtils');
-const { error } = require('console');
 
 // @desc    Register a new user
 // @route   POST /api/auth/register
