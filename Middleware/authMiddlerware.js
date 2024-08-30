@@ -1,7 +1,7 @@
-const jwt=require('jsonwebtone')
+const jwt=require('jsonwebtoken')
 const {JWT_SECRET}=require('../utils/jwtUtils')
 
-module.exports=(req,res,next)=>{
+const verifyToken=(req,res,next)=>{
     const token=req.headers['authorization']?.split('')[1];
     if(!token)return res.status(403).json({error:'Token required'})
 
@@ -11,3 +11,5 @@ module.exports=(req,res,next)=>{
         next();
     })
 }
+
+module.exports={verifyToken}
