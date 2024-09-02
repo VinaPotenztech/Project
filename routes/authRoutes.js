@@ -1,9 +1,9 @@
-const express=require('express');
-const {registerUser,loginUser}=require('../controllers/authControllers');
-const router=express.Router();
-const apiKeyMiddleware = require('../Middleware/apiKeyMiddleware'); // Import the API key middleware
+const express = require("express");
+const { registerUser, loginUser } = require("../controllers/authControllers");
+const router = express.Router();
+const apiKeyMiddleware = require("../Middleware/apiKeyMiddleware"); // Import the API key middleware
 
-router.post('/register',registerUser);
-router.post('/login',loginUser);
+router.post("/register", registerUser);
+router.post("/login", loginUser);
 
-module.exports=router;
+module.exports = router;

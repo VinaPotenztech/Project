@@ -1,3 +1,3 @@
-module.exports={
-    JWT_SECRET:'vina@123'
-}
+module.exports = {
+  JWT_SECRET: "vina@123",
+};
