@@ -2,7 +2,7 @@ const ApiKey = require("../models/apiKeyModel");
 
 const apiKeyMiddleware = async (req, res, next) => {
   try {
-    const apiKey = req.headers["x-api-key"]; // Change the header name if needed
+    const apiKey = req.headers["x-api-key"]; 
     if (!apiKey) return res.status(401).json({ error: "API key required" });
 
     const keyRecord = await ApiKey.findOne({ key: apiKey, active: true });

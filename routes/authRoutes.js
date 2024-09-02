@@ -1,7 +1,7 @@
 const express = require("express");
 const { registerUser, loginUser } = require("../controllers/authControllers");
+const apiKeyMiddleware = require("../Middleware/apiKeyMiddleware"); 
 const router = express.Router();
-const apiKeyMiddleware = require("../Middleware/apiKeyMiddleware"); // Import the API key middleware
 
 router.post("/register", registerUser);
 router.post("/login", loginUser);
